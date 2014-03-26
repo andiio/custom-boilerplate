@@ -1,0 +1,41 @@
+/* --------------------------------------------------*\
+ 
+ $TYPO
+
+\* --------------------------------------------------*/
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+h5{
+  font-size: 13pt;
+  font-weight: 600;
+}
+
+p{
+  font-size: 12pt;
+  line-height: 1.5em;
+}
+
+a{
+  font-size: 13.5pt;
+}
+
+.underline-link{
+  text-decoration: underline;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.align-center{
+	text-align: center;
+}
+
+.uppercase{
+	text-transform: uppercase;
+}

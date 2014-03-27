@@ -8,15 +8,19 @@ html {
 }
 body {
   background: $white;
-  color: $black;
+  color: $gray-darker;
 }
 
 img{
 	max-width: 100%;
 }
 
-a{
-	@include fade;
-	&:hover{
-	}
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include fade;
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: underline;
+  }
 }

@@ -1,16 +1,29 @@
-/* --------------------------------------------------*\
- 
- $NORMALIZE
+/**
+ * Welcome to the wonderful world od SCSS 
+ *
+ * OOCSS
+ *
+ * The formatting of these style sheets try there best to adhere to the
+ * oocss guidelines from Harry Roberts. 
+ *
+ * You can find documentation here: 
+ * https://github.com/csswizardry/CSS-Guidelines
+ * 
+ * Regarding Ui:
+ * http://csswizardry.com/2014/03/naming-ui-components-in-oocss/
+ *
+ */
 
+
+/* --------------------------------------------------*\
+ $NORMALIZE
 \* --------------------------------------------------*/
 
 
 @import "compass/reset";
 
 /* --------------------------------------------------*\
- 
  $CONFIG MODULES
-
 \* --------------------------------------------------*/
 
 @import 'modules/_color.scss';
@@ -18,12 +31,11 @@
 @import 'modules/_mixins.scss';
 @import 'modules/_defaults.scss';
 @import 'modules/_misc.scss';
+@import 'modules/_framework-resets.scss';
 
 
 /* --------------------------------------------------*\
- 
  $ELEMENTS
-
 \* --------------------------------------------------*/
 
 @import 'elements/_typography.scss';
@@ -31,25 +43,19 @@
 @import 'elements/_forms.scss';
 
 /* --------------------------------------------------*\
- 
  $VENDOR
-
 \* --------------------------------------------------*/
 
 @import 'vendor/_external.scss';
 
 /* --------------------------------------------------*\
- 
  $SERVICE
-
 \* --------------------------------------------------*/
 
 @import 'partials/_legacy-browsers.scss';
 
 /* --------------------------------------------------*\
- 
  $PARTIALS
-
 \* --------------------------------------------------*/
 
 @import 'partials/_header.scss';
@@ -58,10 +64,10 @@
 @import 'partials/_footer.scss';
 
 /* --------------------------------------------------*\
- 
  $CUSTOM-OBJECTS
-
 \* --------------------------------------------------*/
 
 @import '_app.scss';
 @import 'modules/_breakpoints.scss';
+
+@import 'modules/_hacks.scss'; // The shame file !important

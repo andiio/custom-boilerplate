@@ -1,12 +1,6 @@
 /* --------------------------------------------------*\
- $BREAKPOINTS
+ $HACKS
 \* --------------------------------------------------*/
 
-@media (max-width: 579px){}
-
-
-@media (max-width: 768px){}
-
-
-@media (min-width: 991px){}
-
+// Override framework functions
+//.my-element{display: block!important;}

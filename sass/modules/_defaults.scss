@@ -1,12 +1,18 @@
-* {
-  box-sizing: border-box;
+/* --------------------------------------------------*\
+ $DEFAULTS
+\* --------------------------------------------------*/
+
+*,
+*:after,
+*:before {
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  @include box-sizing(border-box);
 }
-html {
+
+html,body {
   font-size: 62.5%;
-}
-body {
+  height: 100%;
   background: $white;
   color: $gray-darker;
 }

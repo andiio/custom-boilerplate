@@ -1,9 +1,16 @@
 /* --------------------------------------------------*\
- 
  $FOOTER
-
 \* --------------------------------------------------*/
 
-footer{
-	
+$footer-height: 40px;
+
+footer,
+.page-wrap:after {
+  // Must be the same height as footer
+  height: $footer-height; 
+}
+
+footer {
+  background: orange;
+  padding: 1em;
 }

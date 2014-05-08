@@ -1,5 +1,10 @@
 /* --------------------------------------------------*\
- 
  $APP
-
 \* --------------------------------------------------*/
+
+.page-wrap {
+  min-height: 100%;
+  // Making the footer sticky, must footer height (set in footer.scss)
+  margin-bottom: -$footer-height;
+  @include clearfix();
+}

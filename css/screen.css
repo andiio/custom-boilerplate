@@ -1,7 +1,20 @@
+/**
+ * Welcome to the wonderful world od SCSS 
+ *
+ * OOCSS
+ *
+ * The formatting of these style sheets try there best to adhere to the
+ * oocss guidelines from Harry Roberts. 
+ *
+ * You can find documentation here: 
+ * https://github.com/csswizardry/CSS-Guidelines
+ * 
+ * Regarding Ui:
+ * http://csswizardry.com/2014/03/naming-ui-components-in-oocss/
+ *
+ */
 /* --------------------------------------------------*\
- 
  $NORMALIZE
-
 \* --------------------------------------------------*/
 /* line 5, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -60,51 +73,64 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block; }
 
 /* --------------------------------------------------*\
- 
  $CONFIG MODULES
-
 \* --------------------------------------------------*/
 /* --------------------------------------------------*\
- 
  $COLOR
-
 \* --------------------------------------------------*/
 /**
 * Base colors: http://getbootstrap.com/css/#less-variables
 */
-/* line 1, ../sass/modules/_clearfix.scss */
+/* --------------------------------------------------*\
+ $CLEARFIX
+\* --------------------------------------------------*/
+/* line 5, ../sass/modules/_clearfix.scss */
 .clear:before, .clear:after {
   content: ' ';
   display: table; }
 
-/* line 5, ../sass/modules/_clearfix.scss */
+/* line 9, ../sass/modules/_clearfix.scss */
 .clear {
   *zoom: 1; }
-  /* line 10, ../sass/modules/_clearfix.scss */
+  /* line 14, ../sass/modules/_clearfix.scss */
   .clear:after {
     clear: both; }
 
+/* --------------------------------------------------*\
+ $MIXINS
+\* --------------------------------------------------*/
 /* ROTATE */
-/* line 1, ../sass/modules/_defaults.scss */
-* {
-  box-sizing: border-box;
+/* USAGE
+div.logo {
+   background: url("logo.png") no-repeat;
+   @include image-2x("logo2x.png", 100px, 25px);
+ }
+*/
+/* --------------------------------------------------*\
+ $DEFAULTS
+\* --------------------------------------------------*/
+/* line 5, ../sass/modules/_defaults.scss */
+*,
+*:after,
+*:before {
   font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-/* line 6, ../sass/modules/_defaults.scss */
-html {
-  font-size: 62.5%; }
-
-/* line 9, ../sass/modules/_defaults.scss */
-body {
+/* line 13, ../sass/modules/_defaults.scss */
+html, body {
+  font-size: 62.5%;
+  height: 100%;
   background: white;
   color: #222222; }
 
-/* line 14, ../sass/modules/_defaults.scss */
+/* line 20, ../sass/modules/_defaults.scss */
 img {
   max-width: 100%; }
 
-/* line 18, ../sass/modules/_defaults.scss */
+/* line 24, ../sass/modules/_defaults.scss */
 a {
   color: #428bca;
   text-decoration: none;
@@ -113,84 +139,85 @@ a {
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
-  /* line 22, ../sass/modules/_defaults.scss */
+  /* line 28, ../sass/modules/_defaults.scss */
   a:hover {
     color: #2a6496;
     text-decoration: underline; }
 
-/* line 1, ../sass/modules/_misc.scss */
+/* --------------------------------------------------*\
+ $MISC
+\* --------------------------------------------------*/
+/* line 5, ../sass/modules/_misc.scss */
 ::selection {
   background: #333;
   color: #fff;
   text-shadow: none; }
 
-/* line 6, ../sass/modules/_misc.scss */
+/* line 10, ../sass/modules/_misc.scss */
 ::-moz-selection {
   background: #333;
   color: #fff;
   text-shadow: none; }
 
-/* line 11, ../sass/modules/_misc.scss */
+/* line 15, ../sass/modules/_misc.scss */
 ::-webkit-selection {
   background: #333;
   color: #fff;
   text-shadow: none; }
 
 /* --------------------------------------------------*\
- 
- $ELEMENTS
-
+ $FRAMEWORK-RESETS
 \* --------------------------------------------------*/
 /* --------------------------------------------------*\
- 
- $TYPO
-
+ $ELEMENTS
 \* --------------------------------------------------*/
-/* line 7, ../sass/elements/_typography.scss */
+/* --------------------------------------------------*\
+ $TYPO
+\* --------------------------------------------------*/
+/* line 5, ../sass/elements/_typography.scss */
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   letter-spacing: 0.08em; }
 
-/* line 13, ../sass/elements/_typography.scss */
+/* line 11, ../sass/elements/_typography.scss */
 h5 {
   font-size: 13pt;
   font-weight: 600; }
 
-/* line 18, ../sass/elements/_typography.scss */
+/* line 16, ../sass/elements/_typography.scss */
 p {
   font-size: 12pt;
   line-height: 1.5em; }
 
-/* line 23, ../sass/elements/_typography.scss */
+/* line 21, ../sass/elements/_typography.scss */
 a {
   font-size: 13.5pt; }
 
-/* line 27, ../sass/elements/_typography.scss */
+/* line 25, ../sass/elements/_typography.scss */
 .underline-text {
   text-decoration: underline; }
 
-/* line 31, ../sass/elements/_typography.scss */
+/* line 29, ../sass/elements/_typography.scss */
 .italic-text {
   font-style: italic; }
 
-/* line 35, ../sass/elements/_typography.scss */
+/* line 33, ../sass/elements/_typography.scss */
 .align-center {
   text-align: center; }
 
-/* line 39, ../sass/elements/_typography.scss */
+/* line 37, ../sass/elements/_typography.scss */
 .uppercase {
   text-transform: uppercase; }
 
 /* --------------------------------------------------*\
- 
  $BUTTONS
-
 \* --------------------------------------------------*/
 /* --------------------------------------------------*\
- 
+ $FORMS
+\* --------------------------------------------------*/
+/* --------------------------------------------------*\
  $VENDOR
-
 \* --------------------------------------------------*/
 /* --------------------------------------------------*\
  
@@ -198,16 +225,12 @@ a {
 
 \* --------------------------------------------------*/
 /* --------------------------------------------------*\
- 
  $SERVICE
-
 \* --------------------------------------------------*/
 /* --------------------------------------------------*\
- 
  $LEGACY-BROWSERS
-
 \* --------------------------------------------------*/
-/* line 9, ../sass/partials/_legacy-browsers.scss */
+/* line 7, ../sass/partials/_legacy-browsers.scss */
 .legacy-browser, .error404 {
   line-height: 1.5;
   margin: 0;
@@ -220,57 +243,69 @@ a {
   top: 20%;
   width: 300px;
   background-color: white; }
-  /* line 23, ../sass/partials/_legacy-browsers.scss */
+  /* line 21, ../sass/partials/_legacy-browsers.scss */
   .legacy-browser h1, .error404 h1 {
     color: #555555;
     font-size: 2em;
     font-weight: 400; }
-  /* line 29, ../sass/partials/_legacy-browsers.scss */
+  /* line 27, ../sass/partials/_legacy-browsers.scss */
   .legacy-browser a, .error404 a {
     color: #428bca;
     text-decoration: none; }
   @media only screen and (max-width: 270px) {
-    /* line 35, ../sass/partials/_legacy-browsers.scss */
+    /* line 33, ../sass/partials/_legacy-browsers.scss */
     .legacy-browser body, .error404 body {
       margin: 10px auto;
       position: static;
       width: 95%; }
-    /* line 41, ../sass/partials/_legacy-browsers.scss */
+    /* line 39, ../sass/partials/_legacy-browsers.scss */
     .legacy-browser h1, .error404 h1 {
       font-size: 1.5em; } }
 
 /* --------------------------------------------------*\
- 
  $PARTIALS
-
 \* --------------------------------------------------*/
-/* --------------------------------------------------*\
- 
+/* --------------------------------------------------*\ 
  $HEADER
-
 \* --------------------------------------------------*/
 /* --------------------------------------------------*\
- 
  $NAV
-
 \* --------------------------------------------------*/
 /* --------------------------------------------------*\
- 
  $SIDEBAR
-
 \* --------------------------------------------------*/
 /* --------------------------------------------------*\
- 
  $FOOTER
-
 \* --------------------------------------------------*/
+/* line 7, ../sass/partials/_footer.scss */
+footer,
+.page-wrap:after {
+  height: 40px; }
+
+/* line 13, ../sass/partials/_footer.scss */
+footer {
+  background: orange;
+  padding: 1em; }
+
 /* --------------------------------------------------*\
- 
  $CUSTOM-OBJECTS
-
 \* --------------------------------------------------*/
 /* --------------------------------------------------*\
- 
  $APP
+\* --------------------------------------------------*/
+/* line 5, ../sass/_app.scss */
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -40px; }
 
+/* line 10, ../sass/_app.scss */
+.page-wrap:after {
+  content: "";
+  display: block; }
+
+/* --------------------------------------------------*\
+ $BREAKPOINTS
+\* --------------------------------------------------*/
+/* --------------------------------------------------*\
+ $HACKS
 \* --------------------------------------------------*/
